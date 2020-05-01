@@ -24,8 +24,8 @@ function render(data){
             `);
     }).join(' ');
         
-   var div_msgs= document.getElementById('messages').innerHTML;
-   div_msgs= html;
+   var div_msgs= document.getElementById('messages');
+   div_msgs.innerHTML= html;
    // tener el scroll de mensajes al final (actualizado)- el foco abajo
    div_msgs.scrollTop= div_msgs.scrollHeight;
      console.log("div_msgs", div_msgs);

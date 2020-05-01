@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con Socket.io y NodeJS</title>
+    <!--cargar libreria javascript de socket.io (cliente-servidor)-->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <!--cargar scritp Main de JS-->
+    <script  src="main.js"></script>
+    <!--cargar stylos-->
+    <style>
+        #messages{
+            width: 95%;
+            max-width: 500px;
+            height: 500px;
+            overflow-y: scroll;
+            border: 5px solid #eeeeee;
+            box-shadow: 4px 4px 30px #cccccc inset;
+       }
+     /*calse que se imprime en el map con el servidor*/
+          .message{
+            margin: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 3px solid #cccccc;
+            background-color: whitesmoke;
+          }
+
+    </style>
+
+</head>
+<body>
+    <h1>Chat con Socket.io y NodeJS</h1>
+    <div id="messages"></div>
+    <!--formulario para añadir mensajes-->
+    <form onsubmit="return addMessage(this);">
+            <input type="text" name="nickname" id="nickname" placeholder="Nickname" />
+            <textarea name="nickname" id="text" cols="30" rows="10" placeholder="memsaje..."></textarea>
+            <input type="submit" value="Enviar" />
+    </form>
+
+ 
+</body>
+</html>

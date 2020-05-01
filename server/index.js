@@ -38,16 +38,21 @@ io.on('connection', function (socket) {
    // evento enviar mensajes al cliente
    socket.emit('messages', messages);
 
-   // recibir el evento addMessage y añadir al array
-   socket.on('add-message', function (data) {
-       messages.push(data);
-   });
+    // recibir el evento addMessage y añadir al array
+    socket.on('add-message', function (data) {
+                messages.push(data);
+                
+                console.log('messages-io', messages);
+
+            // evento enviar mensajes a todos los clientes conectados
+            io.sockets.emit('messages', messages);
+
+
+      });
      
    console.log('messages', messages);
 
-    // evento enviar mensajes a todos los clientes conectados
-    io.sockets.emit('messages', messages);
-    console.log('messages-io', messages);
+  
 });
 
 
