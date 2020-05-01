@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat con Socket.io y NodeJS</title>
-    <!--cargar libreria javascript de socket.io (cliente-servidor)-->
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <!--cargar scritp Main de JS-->
-    <script text="text/javascript" src="main.js"></script>
-
+   
     <!--cargar stylos-->
     <style>
         #messages{
@@ -36,12 +32,14 @@
     <div id="messages"></div>
     <!--formulario para añadir mensajes-->
     <form onsubmit="return addMessage(this);">
-            <input type="text" name="nickname" id="nickname" placeholder="Nickname/">
+            <input type="text" name="nickname" id="nickname" placeholder="Nickname" />
             <textarea name="nickname" id="text" cols="30" rows="10" placeholder="memsaje..."></textarea>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" />
     </form>
 
-
-
+ <!--cargar libreria javascript de socket.io (cliente-servidor)-->
+ <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <!--cargar scritp Main de JS-->
+  <script  src="main.js"></script>
 </body>
 </html>

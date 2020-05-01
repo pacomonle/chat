@@ -41,11 +41,13 @@ io.on('connection', function (socket) {
    // recibir el evento addMessage y añadir al array
    socket.on('add-message', function (data) {
        messages.push(data);
-   })
+   });
+     
+   console.log('messages', messages);
 
     // evento enviar mensajes a todos los clientes conectados
     io.sockets.emit('messages', messages);
-
+    console.log('messages-io', messages);
 });
 
 
